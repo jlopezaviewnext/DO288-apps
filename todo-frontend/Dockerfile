@@ -5,8 +5,7 @@ LABEL version="1.0" description="To Do List application front-end" creationDate=
 ENV BACKEND_HOST=localhost:8081
 
 RUN yum install -y --disableplugin=subscription-manager --nodocs \
-  nginx nginx-mod-http-perl
-RUN yum clean all
+  nginx nginx-mod-http-perl && yum clean all
 
 COPY nginx.conf /etc/nginx/
 
